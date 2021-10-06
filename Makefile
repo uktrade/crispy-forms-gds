@@ -46,7 +46,6 @@ help:
 	@echo "  clean-frontend       to clean the frontend assets and node packages"
 	@echo "  clean-tests          to clean the directories created during testing"
 	@echo "  clean-coverage       to clean the test coverage data and reports"
-	@echo "  clean-venv           to clean the virtualenv"
 	@echo "  clean                to clean everything EXCEPT the virtualenv"
 	@echo
 	@echo "  build                to build the package"
@@ -65,7 +64,6 @@ help:
 	@echo "  test                 to run the tests during development"
 	@echo "  test-all             to run the tests for all the supported environments"
 	@echo "  upload               to upload a release to PyPI repository"
-	@echo "  venv                 to create the virtualenv"
 	@echo
 
 .PHONY: clean-build
@@ -103,7 +101,7 @@ clean: clean-build clean-tests clean-coverage clean-docs
 build: clean-build
 	$(python) setup.py sdist bdist_wheel
 
-.PHOMY: checks
+.PHONY: checks
 checks:
 	flake8 $(app_dir)
 	black --check $(app_dir)
