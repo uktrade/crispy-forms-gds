@@ -14,5 +14,5 @@
 #   https://black.readthedocs.io/en/stable/installation_and_usage.html
 
 line-length = 88
-target-version = ['py38']
+target-version = ['py39']
 # exclude = ".*/migrations/.*"

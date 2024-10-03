@@ -62,6 +62,7 @@ help:
 	@echo "  minor                to update the version number for a minor release, e.g. 2.1 to 2.2"
 	@echo "  patch                to update the version number for a patch release, e.g. 2.1.1 to 2.1.2"
 	@echo "  runserver            to run the Django demo site"
+	@echo "  save-requirements    to update .txt requirements from .in files"
 	@echo "  test                 to run the tests during development"
 	@echo "  test-all             to run the tests for all the supported environments"
 	@echo "  upload               to upload a release to PyPI repository"
@@ -160,6 +161,12 @@ patch:
 runserver:
 	$(django) migrate
 	$(django) runserver 8080
+
+.PHONY: save-requirements
+save-requirements:
+	$(pip-compile) requirements/dev.in
+	$(pip-compile) requirements/docs.in
+	$(pip-compile) requirements/tests.in
 
 .PHONY: test
 test:
