@@ -148,7 +148,7 @@ virtualenv==20.10.0
     # via tox
 webencodings==0.5.1
     # via bleach
-zipp==3.6.0
+zipp==3.20.2
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
