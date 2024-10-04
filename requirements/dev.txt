@@ -30,7 +30,7 @@ colorama==0.4.4
     #   twine
 distlib==0.3.4
     # via virtualenv
-django==4.2.11
+django==4.2.16
     # via crispy-forms-gds
 django-crispy-forms==1.13.0
     # via crispy-forms-gds
