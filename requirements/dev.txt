@@ -142,7 +142,7 @@ tqdm==4.66.5
     # via twine
 twine==3.7.1
     # via -r requirements/dev.in
-urllib3==2.2.1
+urllib3==2.2.3
     # via requests
 virtualenv==20.10.0
     # via tox
