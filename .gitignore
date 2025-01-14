@@ -19,7 +19,7 @@ __pycache__/
 build
 dist
 reports
-venv
+venv*
 
 # Any local makefiles
 *.mk
